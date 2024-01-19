@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    /* padding-bottom: 75px; */
+    min-height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+div,
+li {
+    box-sizing: border-box;
+}
+
+.header_nav {
+    background: linear-gradient(90deg, #fff 20%, rgba(0, 0, 0, .6) 60%);
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: stretch;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.global_nav_item {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.global_nav_item:hover {
+    background: #fff;
+    color: #42210b;
+}
+
+.global_nav {
+    display: flex;
+    align-items: stretch;
+}
+
+.logo {
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.section_inner {
+    padding: 50px 10% 30px;
+}
+
+.menu_background {
+    background: url("../images/sample_menu_bg.jpg");    /* 画像保管場所+画像名 */
+    background-attachment: fixed;　    /* fixedで背景固定 */
+}
+
+
+.key {
+    height: 500px;
+    background: center / cover no-repeat url("../images/sample_key.jpg");
+    font-family: 'Noto Serif JP', serif;
+    font-weight: bold;
+    /* class="key section_inner"を上下左右中央寄せにする */
+    display: flex; /* .key .section_innerの親要素 */
+    flex-direction: column; /* 積み重なるように配置する */
+    justify-content: center; /* アイテムを中央に寄せる */
+}
+
+.key h1 {
+    font-size: 2.5rem;
+}
+
+.key .section_inner {
+    display: flex; /* .key .section_innerの子要素 */
+    /* タイトルとサブタイトルを上下中央に表示 */
+    justify-content: center;
+    align-items: center;
+}
+
+.section_title {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section_content {
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+/* CONCEPTの文章:左側レイアウト、幅:60% */
+.section_concept {
+    text-align: left;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+/* CONCEPTの画像:右側レイアウト、幅:335% */
+.section_concept img {
+    align-items: right;
+    width: 35%;
+    justify-content: center;
+        align-items: center;
+}
+
+.menu_title {
+    display: inline-block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.5rem;
+    color: #42210b;
+    border-bottom: solid #42210b 1px;
+    margin-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+}
+ /* 以下を追加 */
+/* pancake 関連レイアウト */
+.pancake ul {
+    display: flex;
+    align-items: center;
+}
+
+.pancake li {
+    display: flex;
+    width: 49%;
+    background-color: white;
+}
+.pancake li:first-child {
+    margin-right: 2%; /* .pancake liの間の余白*/
+}
+
+.pancake_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 5%;
+}
+
+.pancake img {
+    float: left;
+    width: 55%;
+}
+
+.caffee_menu {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;            /*コーヒーメニュー余白20px */
+}
+
+.caffee_menu li {
+    display: flex; /* コーヒーメニューレイアウト（flex）親要素 */ 
+    width: 49%;
+    /* margin: 20px;    コーヒーメニュー余白20px */
+    flex-wrap: wrap;    /*画面折り返し  */
+}
+.caffee_menu_image {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.caffee_menu_list {
+    display: flex;
+    flex-wrap: wrap; /* コーヒーメニューレイアウト（flex）子要素 */
+    flex-direction:column;  /* フレックスアイテムが上から下に配置されます */
+    will-change:80% ;
+    text-align: left;
+}
+
+.caffee_menu ul {
+    display: flex;
+    align-items: center;  
+    flex-wrap: wrap;          *
+}
+
+
+/* ACCESSセクション <dt>要素と<dd>要素は横並びにすること 
+<dt> 80px 
+地図の幅100％⇒index.htmlにて100％に設定する*/
+.section_inner dl {
+     display: flex;
+}
+
+.section_inner dt {
+    width:80px ;
+}
+
+
+/* footer 背景の色は#251e19、文字の色は白を指定すること 
+footerの高さは75pxとすること
+ メニューリストとロゴマークが横並びになり、footerの左右中央に表示されていること 
+ コピーライトはfooterの左右中央に表示されていること */
+footer {
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+    background-color: #251e19;
+    height: 75px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+        justify-content: center;
+            align-items: center;
+}
+
+
+footer li {
+    color: white;
+}
